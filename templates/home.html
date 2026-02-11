@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FarmerHub - Home</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
+</head>
+<body>
+
+<!-- Language Switch -->
+<div class="top-bar">
+    <h1 class="logo">🌾 FarmerHub</h1>
+
+    <select id="languageSelect">
+        <option value="english">English</option>
+        <option value="kannada">Kannada</option>
+        <option value="telugu">Telugu</option>
+        <option value="tamil">Tamil</option>
+    </select>
+</div>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h2 id="welcomeText">Empowering Farmers. Connecting Buyers.</h2>
+    <p id="subText">
+        Sell crops directly without middlemen. Get weather updates and crop insights.
+    </p>
+
+    <div class="buttons">
+        <a href="/login" class="btn" id="loginBtn">Login</a>
+        <a href="/register" class="btn secondary" id="registerBtn">Register</a>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="features">
+
+    <div class="card">
+        <h3 id="feature1">🛒 Direct Marketplace</h3>
+        <p id="feature1Text">Farmers sell directly to buyers.</p>
+    </div>
+
+    <div class="card">
+        <h3 id="feature2">🌦 Weather Updates</h3>
+        <p id="feature2Text">Get real-time weather information.</p>
+    </div>
+
+    <div class="card">
+        <h3 id="feature3">🌱 Crop Insights</h3>
+        <p id="feature3Text">Smart recommendations for better farming.</p>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+</body>
+</html>

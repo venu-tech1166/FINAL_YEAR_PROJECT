@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Register - FarmerHub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+<body>
+
+<div class="register-container">
+
+    <h1>🌾 FarmerHub</h1>
+
+    <select id="languageSelect" name="language">
+        <option value="english">English</option>
+        <option value="kannada">Kannada</option>
+        <option value="telugu">Telugu</option>
+        <option value="tamil">Tamil</option>
+    </select>
+
+    <h2 id="registerTitle">Create Your Account</h2>
+
+    <form method="POST">
+        <input type="text" name="name" id="name" placeholder="Full Name" required>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+
+        <!-- Role Selection -->
+        <div class="role-select">
+            <label>
+                <input type="radio" name="role" value="farmer" required>
+                <span id="farmerText">👨‍🌾 Farmer</span>
+            </label>
+
+            <label>
+                <input type="radio" name="role" value="buyer" required>
+                <span id="buyerText">🛒 Buyer</span>
+            </label>
+        </div>
+
+        <!-- Hidden language input -->
+        <input type="hidden" name="language" id="selectedLanguage" value="english">
+
+        <button type="submit" id="registerBtn">Register</button>
+    </form>
+
+    <p>
+        <a href="/login" id="loginLink">Already have an account? Login</a>
+    </p>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/register.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(-45deg, #1e8449, #2ecc71, #27ae60, #145a32);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT SIDE */
+.video-section {
+    flex: 1;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.video-section video {
+    width: 80%;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.voice-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    background: #f39c12;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.login-section {
+    flex: 1;
+    background: white;
+    padding: 60px;
+    text-align: center;
+}
+
+.login-section h1 {
+    color: #27ae60;
+}
+
+input {
+    width: 80%;
+    padding: 14px;
+    margin: 15px 0;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 85%;
+    padding: 15px;
+    font-size: 20px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e8449;
+}
+
+select {
+    padding: 8px;
+    margin-bottom: 20px;
+}

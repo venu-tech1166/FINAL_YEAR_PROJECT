@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+}
+
+.register-container {
+    width: 400px;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin: 15px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.role-select {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.role-select label {
+    font-size: 18px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #27ae60;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e8449;
+}
+
+select {
+    padding: 8px;
+    margin-bottom: 20px;
+}

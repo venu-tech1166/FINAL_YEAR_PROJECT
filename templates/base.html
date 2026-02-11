@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}FarmerHub{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<!-- ✅ NAVBAR -->
+<nav class="navbar">
+    <div class="logo">🌾 FarmerHub</div>
+
+    <ul class="nav-links">
+        <li><a href="/home">Home</a></li>
+
+        {% if session.get('user_id') %}
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+        {% else %}
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+        {% endif %}
+    </ul>
+</nav>
+
+<!-- ✅ PAGE CONTENT -->
+<div class="page-content">
+    {% block content %}{% endblock %}
+</div>
+
+{% block extra_js %}{% endblock %}
+
+</body>
+</html>
